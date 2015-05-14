@@ -1,7 +1,7 @@
 package Kata;
 
 import static org.junit.Assert.assertEquals;
-
+import Kata.BowlingGame;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -25,6 +25,14 @@ public class BowlingGameTest {
 	public void setUp() throws Exception {
 			game = new BowlingGame();
 		
+	}
+	
+	@Test
+	public void gutterGame_ShouldReturnRed(){
+		for (int i=0;i<20;i++){
+			game.roll(0);
+		}
+		assertEquals(0, game.score());
 	}
 	
 	
