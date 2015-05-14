@@ -2,7 +2,9 @@ package Kata;
 
 import static org.junit.Assert.assertEquals;
 import Kata.BowlingGame;
+
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 
@@ -17,6 +19,7 @@ import org.junit.Test;
 public class BowlingGameTest {
 
 	private BowlingGame game;
+//pins - krêgle
 
 	private void rollMany(int rolls, int pins) {
 		for (int i = 0; i < rolls; i++) {
@@ -57,6 +60,7 @@ public class BowlingGameTest {
 		assertEquals(20, game.score());
 	}
 	
+	@Ignore
 	@Test
 	public void oneSpare(){
 		game.roll(5);
