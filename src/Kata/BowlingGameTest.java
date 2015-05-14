@@ -16,33 +16,34 @@ public class BowlingGameTest {
 
 	@Test
 	public void canRoll() {
-		game.roll(0);
-
+		game.roll(0); 
+	}
+	
+	private void rollMany(int rolls, int pins) {
+		for (int i = 0; i < rolls; i++) {
+			game.roll(pins);
+		}
 	}
 
 	@Before
 	public void setUp() throws Exception {
 		game = new BowlingGame();
-
 	}
 
 	@Test
 	public void gutterGame_ShouldReturnRed() {
-		for (int i = 0; i < 20; i++) {
-			game.roll(0);
-		}
+		rollMany(20, 0);
 		assertEquals(0, game.score());
 	}
+
 	
+
 	@Test
-	public void allOnes(){
+	public void allOnes() {
 		for (int i = 0; i < 20; i++) {
 			game.roll(1);
 		}
 		assertEquals(20, game.score());
 	}
-	
+
 }
-	
-
-
